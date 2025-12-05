@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "title": "The monk who sold his ferrari ",
+        "creator": "Robin sharma",
+        "category": "Book",
+        "year": "2011",
+        "image_filename": null
+    },
+    {
+        "id": 2,
+        "title": "Justice League",
+        "creator": "Jack snyders ",
+        "category": "Film",
+        "year": "November 16, 2017",
+        "image_filename": null
+    },
+    {
+        "id": 3,
+        "title": "The Batman",
+        "creator": "Matt Reves ",
+        "category": "Film",
+        "year": "March 3, 2022 ",
+        "image_filename": null
+    },
+    {
+        "id": 4,
+        "title": "The Dark Knight Rises",
+        "creator": "Christopher Nolan",
+        "category": "Film",
+        "year": "July 26, 2012",
+        "image_filename": null
+    },
+    {
+        "id": 5,
+        "title": "The Dark Knight",
+        "creator": "Christopher Nolan",
+        "category": "Film",
+        "year": "August 1, 2008",
+        "image_filename": null
+    },
+    {
+        "id": 6,
+        "title": "Batman Begins",
+        "creator": "Christopher Nolan",
+        "category": "Film",
+        "year": "June 16, 2005",
+        "image_filename": null
+    },
+    {
+        "id": 7,
+        "title": "Fast Car",
+        "creator": "Phil Weeden",
+        "category": "Magazine",
+        "year": "18 July 2016",
+        "image_filename": null
+    },
+    {
+        "id": 8,
+        "title": "Electric Vs Engines",
+        "creator": "Bauer Consumer Media",
+        "category": "Magazine",
+        "year": "2024",
+        "image_filename": null
+    },
+    {
+        "id": 9,
+        "title": "Steve Jobs",
+        "creator": "Walter Issac ",
+        "category": "Book",
+        "year": "2011",
+        "image_filename": null
+    },
+    {
+        "id": 10,
+        "title": "Lance Armstrong its not about the bike .My journey Back to life",
+        "creator": "Lance Armstrong",
+        "category": "Book",
+        "year": "2001",
+        "image_filename": null
+    },
+    {
+        "id": 11,
+        "title": "The Richest Man in Babylon",
+        "creator": "George Samuel Clason",
+        "category": "Book",
+        "year": "1926",
+        "image_filename": null
+    },
+    {
+        "id": 12,
+        "title": "Secrets of the Millionaire Mind",
+        "creator": "T. Harv Eker",
+        "category": "Book",
+        "year": "February 15, 2005",
+        "image_filename": null
+    },
+    {
+        "id": 13,
+        "title": "The flash",
+        "creator": "Andr\u00e9s Muschietti",
+        "category": "Book",
+        "year": "June 15, 2023",
+        "image_filename": null
+    },
+    {
+        "id": 14,
+        "title": "Spider-Man: Homecoming\n",
+        "creator": "Jon Watts",
+        "category": "Book",
+        "year": "July 13, 2017",
+        "image_filename": null
+    },
+    {
+        "id": 15,
+        "title": "Iron Man ",
+        "creator": "Jon Favreau",
+        "category": "Book",
+        "year": "May 1, 2008",
+        "image_filename": null
+    },
+    {
+        "id": 16,
+        "title": "Spiderman: Far from home",
+        "creator": "Jon Watts",
+        "category": "Book",
+        "year": "July 4, 2019",
+        "image_filename": null
+    },
+    {
+        "id": 17,
+        "title": "Iron Man 2",
+        "creator": " Jon Favreau",
+        "category": "Book",
+        "year": "2011",
+        "image_filename": null
+    },
+    {
+        "id": 18,
+        "title": "Spiderman Noway Home ",
+        "creator": " Jon Watts",
+        "category": "Film",
+        "year": "2021",
+        "image_filename": null
+    }
+]

@@ -1,0 +1,84 @@
+
+
+# Legendary01 Bookstore Application
+
+## Overview
+
+Legendary01 is a simple, elegant media management system built using Python. It serves as a minimalistic digital bookstore and media library manager, allowing users to add, search, and delete media items such as books, films, and magazines. The application uses a JSON file as its lightweight database and provides a clean, user-friendly graphical interface with Tkinter.
+
+Additionally, a standalone website built with HTML showcases the bookstore project and its features, serving as a portfolio demonstration.
+
+
+
+Features
+
+Backend & Data Storage
+
+* Uses a JSON file (`Legendary01_data.json`) to store media items persistently.
+* Supports CRUD operations: Add, retrieve, search, and delete media items.
+* Each item stores:
+
+  * ID (auto-incremented)
+  * Title
+  * Creator (Author/Director)
+  * Category (Book, Film, Magazine)
+  * Year of release/publication
+  
+
+Frontend (Tkinter GUI)
+
+* Modern "Midnight & Gold" themed interface for an appealing user experience.
+* Sidebar input panel for adding new media entries.
+* Main panel displays the list of items in a searchable and sortable table.
+* Search functionality with instant filtering by title or creator.
+* Delete function to remove selected entries safely with confirmation dialogs.
+* Responsive layout with scrollable item list.
+
+Website (HTML)
+
+* Simple HTML website to present the bookstore project.
+* Highlights key functionalities and design aspects.
+* Acts as a portfolio showcase for the application.
+
+---
+
+## Technical Details
+
+* Programming Language:Python 3.11.1
+* GUI Framework:Tkinter with themed styles
+* Data Storage:JSON file (`Legendary01.json`)
+* HTTP API: Uses `requests` to communicate with backend (assumed Flask or similar running locally at `http://127.0.0.1:5000/api/items`)
+* JSON File Management:Safe reading/writing with error handling and data validation.
+* User Experience:Clear validation, confirmation dialogs, and error handling to ensure smooth usage.
+
+---
+
+How to Run
+
+1. Start Backend Server:(Flask or another HTTP server serving API endpoints for item CRUD)
+2. Run GUI Application:
+
+   bash
+   python your_gui_file.py
+   
+3. Access the Application:
+The GUI opens locally and connects to the backend API.
+4. Use Website:
+Open your HTML file in any browser to view the project showcase.
+
+---
+
+Future Improvements
+
+* Integrate image upload/display functionality within the app.
+* Expand backend to use a more robust database (SQLite/PostgreSQL).
+* Add user authentication and role management.
+* Enhance the website with dynamic content fetching.
+* Implement pagination and sorting in the GUI table.
+
+
+
+For more information or questions, please contact:
+Srisllok Jonnalagadda
+100004976
+
