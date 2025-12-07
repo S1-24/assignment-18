@@ -5,45 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me & Project Idea</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --midnight: #0f172a;
+            --gold: #f59e0b;
+            --dark-bg: #020617;
+            --card-bg: #0b1220;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background: #f5f6fa;
-            color: #130f40;
+            background: linear-gradient(135deg, #020617, #020617, #020617);
+            color: var(--text-main);
             margin: 0;
             padding: 0;
         }
+
+        /* Navbar */
+        nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            animation: fadeSlide 0.8s ease;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav .nav-wrap {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Content Card */
         .container {
-            max-width: 600px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(19,15,64,0.08);
-            padding: 32px;
+            max-width: 650px;
+            margin: 60px auto;
+            background: rgba(11, 18, 32, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+            padding: 36px;
+            animation: fadeSlide 1s ease forwards;
         }
+
         h1 {
-            color: #e48d29;
-            font-size: 2.5rem;
-            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 3rem;
+            margin-bottom: 16px;
         }
+
         h2 {
-            color: #130f40;
-            font-size: 1.5rem;
+            color: var(--text-main);
+            font-size: 1.6rem;
             margin-top: 32px;
         }
+
         p {
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1.15rem;
+            line-height: 1.8;
             margin-bottom: 18px;
+            color: var(--text-muted);
         }
+
+        /* Fade + slide */
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hover glow */
+        .container:hover {
+            transform: translateY(-3px);
+            transition: 0.3s ease;
+            box-shadow: 0 30px 70px rgba(245, 158, 11, 0.15);
+        }
+
     </style>
 </head>
+
 <body>
+
+    <nav class="bg-[#130f40] text-white py-4 shadow-md fixed top-0 w-full z-50">
+  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-[#e48d29]">LegendaryOneApex</h1>
+
+    <ul class="flex space-x-8 text-lg font-semibold">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home.html" class="nav-link">About</a></li>
+      <li><a href="#" class="nav-link text-[#e48d29]">My Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Spacer for fixed navbar -->
+<div class="h-20"></div>
+
+    <!-- CONTENT -->
     <div class="container">
         <h1>About Me</h1>
-        <p>Hi, I'm S.J, a passionate developer who loves building user-friendly desktop applications. I enjoy working with Python, Tkinter, and Flask, and I believe in clean, modern UI design that makes technology accessible to everyone.</p>
+        <p>
+            Hi, I'm S.J, a passionate developer who loves building user-friendly desktop applications.
+            I enjoy working with Python, Tkinter, and Flask, and I believe in clean, modern UI design that
+            makes technology accessible to everyone.
+        </p>
+
         <h2>Project Idea</h2>
-        <p>The Legendaryoneapex Bookstore project is a desktop app designed to help users manage their personal media collections, including books and films. It features a Tkinter-based frontend, a Flask backend, and a simple JSON database for easy data management. My goal was to create a reliable, intuitive system that makes organizing and searching your library effortless.</p>
+        <p>
+            The Legendaryoneapex Bookstore project is a desktop app designed to help users manage their
+            personal media collections, including books and films. It features a Tkinter-based frontend,
+            a Flask backend, and a simple JSON database for easy data management. My goal was to create a
+            reliable, intuitive system that makes organizing and searching your library effortless.
+        </p>
     </div>
+
 </body>
 </html>
+
+                    
