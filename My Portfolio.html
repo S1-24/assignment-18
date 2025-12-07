@@ -5,115 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Projects - Superman vs Batman</title>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-  <!-- Animations & Theme -->
   <style>
-        :root {
-            --midnight: #03050a;
-            --gold: #f59e0b;
-            --light-bg: #f8fafc;
-            --dark-text: #cbd5f5;
-            --card-bg: #0b1220;
-            --accent-blue: #38bdf8;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #020617, #020617, #020617);
+      color: #cbd5f5;
+      scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #020617, #020617, #020617);
-            color: var(--dark-text);
-            scroll-behavior: smooth;
-        }
+    .fade-slide {
+      animation: fadeSlide 0.9s ease forwards;
+    }
 
-        .text-accent { color: var(--gold); }
-        .bg-primary { background-color: var(--midnight); }
-        .bg-card { background-color: var(--card-bg); }
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .glass {
-            backdrop-filter: blur(12px);
-            background: rgba(15, 23, 42, 0.75);
-        }
+    .hover-zoom {
+      transition: all .3s ease;
+    }
 
-        .fade-slide {
-            animation: fadeSlide 0.9s ease forwards;
-        }
+    .hover-zoom:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(0,0,0,.4);
+    }
 
-        @keyframes fadeSlide {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .nav-link {
+      position: relative;
+      color: #cbd5f5;
+    }
 
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 2px;
+      background: #e48d29;
+      transition: width .3s ease;
+    }
 
-        .code-box {
-            background-color: #020617;
-            padding: 1rem;
-            border-radius: 0.6rem;
-            color: #e2e8f0;
-            font-family: monospace;
-            overflow-x: auto;
-            border-left: 4px solid var(--gold);
-        }
+    .nav-link:hover::after {
+      width: 100%;
+    }
 
-        .feature-img-container {
-            width: 100%;
-            height: 150px;
-            background-color: #020617;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-radius: 0.6rem;
-            margin-bottom: 1rem;
-        }
+    .game-image {
+      transition: transform .5s ease, box-shadow .5s ease;
+    }
 
-        .feature-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hover-glow:hover {
-            box-shadow: 0 0 0px #f59e0b, 0 0 25px rgba(245, 158, 11, 0.25);
-            transform: translateY(-4px);
-            transition: 0.3s ease;
-        }
-    </style>
+    .game-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,.5);
+    }
+  </style>
 </head>
 
 <body class="antialiased">
 
-
-<!-- ================= NAVBAR ================= -->
+<!-- ========== NAVBAR ========== -->
 <nav class="bg-[#130f40] text-white py-4 shadow-md fixed top-0 w-full z-50">
   <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-[#e48d29]">LegendaryOneApex</h1>
-
     <ul class="flex space-x-8 text-lg font-semibold">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="home.html" class="nav-link">About</a></li>
@@ -122,72 +88,80 @@
   </div>
 </nav>
 
-<!-- Spacer for fixed navbar -->
-<div class="h-20"></div>
+<div class="h-24"></div>
 
-<!-- ================= MAIN CONTENT ================= -->
-<main class="max-w-4xl mx-auto px-6 py-12 bg-white rounded-xl shadow-xl">
+<!-- ========== MAIN CONTENT ========== -->
+<main class="max-w-4xl mx-auto px-6 py-12 bg-white/95 rounded-xl shadow-xl fade-slide">
 
   <h1 class="text-4xl font-extrabold mb-4 text-[#e48d29]">
     🎮 Superman vs Batman – 2D Multiplayer Game
   </h1>
 
-  <p class="text-lg text-gray-700 mb-6">
-    Superman vs Batman is a fast-paced 2D multiplayer game developed by me as a personal project. 
-    The game allows two players to battle each other using unique character powers and weapons.
+  <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+    Superman vs Batman is a fast-paced 2D multiplayer game where two players use
+    unique characters and weapons in real-time combat.
   </p>
 
-  <div class="grid md:grid-cols-2 gap-6 mb-8">
+  <!-- IMAGE SECTION -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-[#130f40] mb-4">📸 Game Preview</h2>
 
-    <!-- Superman Card -->
+    <div class="rounded-xl overflow-hidden shadow-lg hover-zoom">
+      <img 
+        src="GamePreview.png"
+        alt="Game Preview"
+        class="w-full h-[280px] object-cover game-image"
+      >
+    </div>
+
+    
+    </p>
+  </div>
+
+  <!-- CARDS -->
+  <div class="grid md:grid-cols-2 gap-6 mb-10">
     <div class="bg-[#130f40] text-white p-6 rounded-xl hover-zoom">
       <h2 class="text-2xl font-bold text-[#e48d29] mb-2">🦸 Superman</h2>
       <p class="text-sm leading-relaxed">
-        Superman uses a powerful shooter weapon that fires energy projectiles. 
-        His attacks are fast, long-ranged, and deadly in battle.
+        Uses a shooter weapon that fires powerful energy blasts at long range.
       </p>
     </div>
 
-    <!-- Batman Card -->
     <div class="bg-[#130f40] text-white p-6 rounded-xl hover-zoom">
       <h2 class="text-2xl font-bold text-[#e48d29] mb-2">🦇 Batman</h2>
       <p class="text-sm leading-relaxed">
-        Batman uses his signature Bat Ring weapon. 
-        It acts like a boomerang, damaging enemies and returning back.
+        Uses Bat Rings that damage enemies and return like a boomerang.
       </p>
     </div>
-
   </div>
 
-  <!-- Game Features -->
+  <!-- FEATURES -->
   <div class="mb-10">
     <h2 class="text-2xl font-bold mb-4 text-[#130f40]">✨ Game Features</h2>
     <ul class="list-disc list-inside text-gray-700 space-y-2">
-      <li>Real-time local multiplayer mode</li>
+      <li>Real-time local multiplayer</li>
       <li>Smooth 2D animations</li>
-      <li>Unique character weapons</li>
-      <li>Keyboard controls for both players</li>
+      <li>Unique characters & abilities</li>
+      <li>Fast keyboard controls</li>
     </ul>
   </div>
 
-  <!-- Download Section -->
-  <div class="bg-[#130f40] p-6 rounded-xl text-center hover-zoom">
+  <!-- DOWNLOAD -->
+  <div class="bg-[#130f40] p-8 rounded-xl text-center hover-zoom">
     <h3 class="text-2xl font-bold text-[#e48d29] mb-3">Download the Game</h3>
-    <p class="text-white mb-6">
-      Click the button below to download and play the game.
-    </p>
+    <p class="text-white mb-6">Click to download your game file.</p>
 
     <a href="Superman_vs_batman.zip" download
-       class="bg-[#e48d29] text-[#130f40] px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-yellow-400 transition-all duration-300">
-      ⬇ Download Game (ZIP)
+       class="bg-[#e48d29] text-[#130f40] px-10 py-4 rounded-xl font-bold shadow-lg hover:bg-yellow-400 transition-all duration-300 inline-block">
+      ⬇ Download ZIP
     </a>
   </div>
 
 </main>
 
-<!-- ================= FOOTER ================= -->
-<footer class="text-center text-gray-400 py-8 mt-16">
-  © 2025 S.J – Game Development Project
+<!-- FOOTER -->
+<footer class="text-center text-gray-400 py-10 mt-20">
+  © 2025 S.J — Game Project
 </footer>
 
 </body>
