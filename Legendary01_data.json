@@ -1,1 +1,254 @@
-[]
+[
+    {
+        "id": 1,
+        "title": "The monk who sold his ferrari",
+        "creator": "Robin sharma",
+        "category": "Book",
+        "year": "2015"
+    },
+    {
+        "id": 2,
+        "title": "F1 ",
+        "creator": "Joseph Kosinski",
+        "category": "Film",
+        "year": "2025"
+    },
+    {
+        "id": 3,
+        "title": "The batman",
+        "creator": "Matt Reeves",
+        "category": "Film",
+        "year": "2021"
+    },
+    {
+        "id": 4,
+        "title": "Atomic Habits",
+        "creator": "James clear",
+        "category": "Book",
+        "year": "2018"
+    },
+    {
+        "id": 5,
+        "title": "The 48 Laws of Power ",
+        "creator": "robert Greene",
+        "category": "Book",
+        "year": "2015"
+    },
+    {
+        "id": 6,
+        "title": "Rich  Dad Poor Dad ",
+        "creator": "Robert Kiyosaki",
+        "category": "Book",
+        "year": "1997"
+    },
+    {
+        "id": 7,
+        "title": "Justice League ",
+        "creator": "Zack Snyders",
+        "category": "Film",
+        "year": "2017"
+    },
+    {
+        "id": 8,
+        "title": "Iron man 01",
+        "creator": "Jon Favreau",
+        "category": "Film",
+        "year": "2008"
+    },
+    {
+        "id": 9,
+        "title": "Iron Man 02",
+        "creator": "Jon Favreau",
+        "category": "Film",
+        "year": "2010"
+    },
+    {
+        "id": 10,
+        "title": "Iron man 03",
+        "creator": "Jon Favreau",
+        "category": "Film",
+        "year": "2013"
+    },
+    {
+        "id": 11,
+        "title": "Read people like a book",
+        "creator": "Patrik King",
+        "category": "Book",
+        "year": "2020"
+    },
+    {
+        "id": 12,
+        "title": "The Dairy Of A Ceo",
+        "creator": "Steve Bartlett",
+        "category": "Book",
+        "year": "2023"
+    },
+    {
+        "id": 13,
+        "title": "Spiderman Homcoming ",
+        "creator": "Jon  Watts",
+        "category": "Film",
+        "year": "2017"
+    },
+    {
+        "id": 14,
+        "title": "Spiderman Far From Home",
+        "creator": "Jon Watts",
+        "category": "Film",
+        "year": "2020"
+    },
+    {
+        "id": 15,
+        "title": "Spider No Way Home",
+        "creator": "Jon Watts",
+        "category": "Film",
+        "year": "2024"
+    },
+    {
+        "id": 16,
+        "title": "The Amazing Spiderman",
+        "creator": "Marc Webb",
+        "category": "Film",
+        "year": "2012"
+    },
+    {
+        "id": 17,
+        "title": "The Amazing spiderman 02",
+        "creator": "Marc Webb",
+        "category": "Film",
+        "year": "2014"
+    },
+    {
+        "id": 18,
+        "title": "How to win firends and influence People",
+        "creator": "Dale Carnegie",
+        "category": "Book",
+        "year": ""
+    },
+    {
+        "id": 19,
+        "title": "Cycle of lies",
+        "creator": "Lance Armstrong",
+        "category": "Book",
+        "year": "2013"
+    },
+    {
+        "id": 20,
+        "title": "Think and grow rich",
+        "creator": "Napoleon Hill",
+        "category": "Book",
+        "year": "1980"
+    },
+    {
+        "id": 21,
+        "title": "Rich Family and Smart family ",
+        "creator": "Robert KIyosaki ",
+        "category": "Book",
+        "year": "2014"
+    },
+    {
+        "id": 22,
+        "title": "The Psychology of money",
+        "creator": "Morgan Housel",
+        "category": "Book",
+        "year": ""
+    },
+    {
+        "id": 23,
+        "title": "The wolf of Investing",
+        "creator": "Jordan Belfort",
+        "category": "Book",
+        "year": ""
+    },
+    {
+        "id": 24,
+        "title": "The Wealth of Nations",
+        "creator": "Adam Smith",
+        "category": "Book",
+        "year": ""
+    },
+    {
+        "id": 25,
+        "title": "Dr Strange",
+        "creator": "Scott Derrickson",
+        "category": "Film",
+        "year": "2016"
+    },
+    {
+        "id": 26,
+        "title": "Dr Strange in the Multiverse of Madness ",
+        "creator": "Sam Raimi",
+        "category": "Film",
+        "year": "2022"
+    },
+    {
+        "id": 27,
+        "title": "The Avenger ",
+        "creator": "Joss Whedon",
+        "category": "Film",
+        "year": "2012"
+    },
+    {
+        "id": 28,
+        "title": "Avengers:Age of Ultron ",
+        "creator": "Joss Whedon",
+        "category": "Film",
+        "year": "2015"
+    },
+    {
+        "id": 29,
+        "title": "Avengers Infinity War",
+        "creator": "Russo Brothers",
+        "category": "Film",
+        "year": "2018"
+    },
+    {
+        "id": 30,
+        "title": "Avengers :Endgame",
+        "creator": "Russo Brothers",
+        "category": "Film",
+        "year": "2019"
+    },
+    {
+        "id": 31,
+        "title": "Capitan America First Avenger",
+        "creator": "Joe Johnston ",
+        "category": "Film",
+        "year": "2011"
+    },
+    {
+        "id": 32,
+        "title": "Captain America :Winter Solider",
+        "creator": "Russo Brother",
+        "category": "Film",
+        "year": "2014"
+    },
+    {
+        "id": 33,
+        "title": "Captain America : Civil War",
+        "creator": "Russo Brother",
+        "category": "Film",
+        "year": "2016"
+    },
+    {
+        "id": 34,
+        "title": "Deadpool",
+        "creator": "Tim Miller",
+        "category": "Film",
+        "year": "2016"
+    },
+    {
+        "id": 35,
+        "title": "Dead pool 2",
+        "creator": "David Leitch",
+        "category": "Film",
+        "year": "2018"
+    },
+    {
+        "id": 36,
+        "title": "Deadpool and Wolvarine",
+        "creator": "Shawn Lvy",
+        "category": "Film",
+        "year": "2024"
+    }
+]
