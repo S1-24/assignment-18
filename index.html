@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MyLibrary Project Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
     <style>
         :root {
@@ -24,9 +24,17 @@
             scroll-behavior: smooth;
         }
 
-        .text-accent { color: var(--gold); }
-        .bg-primary { background-color: var(--midnight); }
-        .bg-card { background-color: var(--card-bg); }
+        .text-accent {
+            color: var(--gold);
+        }
+
+        .bg-primary {
+            background-color: var(--midnight);
+        }
+
+        .bg-card {
+            background-color: var(--card-bg);
+        }
 
         .glass {
             backdrop-filter: blur(12px);
@@ -38,13 +46,21 @@
         }
 
         @keyframes fadeSlide {
-            from { opacity: 0; transform: translateY(25px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .nav-link {
             position: relative;
         }
+
         .nav-link::after {
             content: "";
             position: absolute;
@@ -55,7 +71,10 @@
             background: var(--gold);
             transition: width 0.3s ease;
         }
-        .nav-link:hover::after { width: 100%; }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
         .code-box {
             background-color: #020617;
@@ -90,116 +109,127 @@
             transform: translateY(-4px);
             transition: 0.3s ease;
         }
+
+        .text-midnight {
+            color: var(--midnight);
+        }
     </style>
 </head>
 
 <body class="antialiased">
 
-<!-- NAVBAR -->
-<nav class="bg-[#130f40] text-white py-4 shadow-md fixed top-0 w-full z-50">
-    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-[#e48d29]">LegendaryOneApex</h1>
+    <!-- NAVBAR -->
+    <nav class="bg-[#130f40] text-white py-4 shadow-md fixed top-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#e48d29]">LegendaryOneApex</h1>
 
-        <ul class="flex space-x-8 text-lg font-semibold">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="home.html" class="nav-link">About</a></li>
-            <li><a href="My Portfolio.html" class="nav-link">My Portfolio</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div class="h-20"></div>
-
-<!-- HEADER -->
-<header class="bg-primary text-white py-14 mb-12 shadow-2xl fade-slide">
-    <div class="max-w-4xl mx-auto px-4">
-        <h1 class="text-5xl font-extrabold mb-2 tracking-tight">
-            Legendaryoneapex bookstore <span class="text-accent">Project</span>
-        </h1>
-        <p class="text-xl text-slate-400">– By S.J</p>
-    </div>
-</header>
-
-<main class="max-w-4xl mx-auto px-4">
-
-    <!-- PROJECT OVERVIEW -->
-    <section class="mb-16 p-6 bg-card rounded-xl shadow-lg border-t-4 border-yellow-500 fade-slide hover-glow">
-        <h2 class="text-3xl font-bold mb-4 text-white">Project Overview</h2>
-        <p class="text-lg text-slate-300 mb-6">
-            My Library is a desktop application designed to manage a personal collection of media.
-        </p>
-
-        <div class="p-4 rounded-md bg-slate-950 border border-slate-800">
-            <p class="font-semibold text-slate-200 mb-2">Technology Stack:</p>
-            <ul class="list-disc list-inside text-slate-400 ml-4">
-                <li>Frontend: Python Tkinter</li>
-                <li>Backend: Python Flask</li>
-                <li>Database: JSON file</li>
+            <ul class="flex space-x-8 text-lg font-semibold">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="home.html" class="nav-link">About</a></li>
+                <li><a href="My Portfolio.html" class="nav-link">My Portfolio</a></li>
             </ul>
         </div>
-    </section>
+    </nav>
 
-    <!-- FEATURES -->
-    <section class="mb-16 fade-slide">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Key Features</h2>
+    <div class="h-20"></div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            <!-- Inventory -->
-            <a href="inventory-details.html" class="block">
-                <div class="bg-card p-5 rounded-xl shadow-lg hover-glow">
-                    <div class="feature-img-container">
-                        <img src="App .png" alt="Inventory Management Screenshot">
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Inventory (CRUD)</h3>
-                    <p class="text-slate-400 text-sm">Add, view, update, and delete items.</p>
-                </div>
-            </a>
-
-            <!-- Smart Search (UPDATED, CLICKABLE) -->
-            <a href="smart-search-details.html" class="block">
-                <div class="bg-card p-5 rounded-xl shadow-lg hover-glow">
-                    <div class="feature-img-container">
-                        <img src="Smart search.png" alt="Smart search">
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Smart Search</h3>
-                    <p class="text-slate-400 text-sm">Instant search for books and films.</p>
-                </div>
-            </a>
-
+    <!-- HEADER -->
+    <header class="bg-primary text-white py-14 mb-12 shadow-2xl fade-slide">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl font-extrabold mb-2 tracking-tight">
+                Legendaryoneapex bookstore <span class="text-accent">Project</span>
+            </h1>
+            <p class="text-xl text-slate-400">– By S.J</p>
         </div>
-    </section>
+    </header>
 
-    <!-- RUN INSTRUCTIONS -->
-    <section class="mb-16 p-6 bg-card rounded-xl shadow-lg fade-slide hover-glow">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Run Instructions</h2>
+    <main class="max-w-4xl mx-auto px-4">
 
-        <p class="mb-4 text-lg text-slate-300">
-            The system operates in two separate processes using an API.
-        </p>
+        <!-- PROJECT OVERVIEW -->
+        <section class="mb-16 p-6 bg-card rounded-xl shadow-lg border-t-4 border-yellow-500 fade-slide hover-glow">
+            <h2 class="text-3xl font-bold mb-4 text-white">Project Overview</h2>
+            <p class="text-lg text-slate-300 mb-6">
+                My Library is a desktop application designed to manage a personal collection of media.
+            </p>
 
-        <h3 class="text-2xl font-semibold mb-3 text-white">Step 1: Install Packages</h3>
-        <div class="code-box mb-6">pip install Flask requests</div>
+            <div class="p-4 rounded-md bg-slate-950 border border-slate-800">
+                <p class="font-semibold text-slate-200 mb-2">Technology Stack:</p>
+                <ul class="list-disc list-inside text-slate-400 ml-4">
+                    <li>Frontend: Python Tkinter</li>
+                    <li>Backend: Python Flask</li>
+                    <li>Database: JSON file</li>
+                </ul>
+            </div>
+        </section>
 
-        <h3 class="text-2xl font-semibold mb-3 text-white">Step 2: Run Backend</h3>
-        <div class="code-box mb-6">python backend.py</div>
+        <!-- FEATURES -->
+        <section class="mb-16 fade-slide">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Key Features</h2>
 
-        <h3 class="text-2xl font-semibold mb-3 text-white">Step 3: Run Frontend</h3>
-        <div class="code-box">python frontend.py</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <p class="font-medium text-red-400 mt-6">
-            ⚠ Ensure backend is running before starting the frontend GUI.
-        </p>
-    </section>
+                <!-- Inventory -->
+                <a href="inventory-details.html" class="block">
+                    <div class="bg-card p-5 rounded-xl shadow-lg hover-glow">
+                        <div class="feature-img-container">
+                            <img src="App .png" alt="Inventory Management Screenshot" />
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Inventory (CRUD)</h3>
+                        <p class="text-slate-400 text-sm">Add, view, update, and delete items.</p>
+                    </div>
+                </a>
 
-</main>
+                <!-- Smart Search (UPDATED, CLICKABLE) -->
+                <a href="smart-search-details.html" class="block">
+                    <div class="bg-card p-5 rounded-xl shadow-lg hover-glow">
+                        <div class="feature-img-container">
+                            <img src="Smart search.png" alt="Smart search" />
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Smart Search</h3>
+                        <p class="text-slate-400 text-sm">Instant search for books and films.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-<!-- FOOTER -->
-<footer class="bg-primary text-slate-500 py-6 mt-12 fade-slide">
-    <div class="max-w-4xl mx-auto text-center">
-        <p>© 2025 MyLibrary Project.</p>
-    </div>
-</footer>
+        <!-- RUN INSTRUCTIONS -->
+        <section class="mb-16 p-6 bg-card rounded-xl shadow-lg fade-slide hover-glow">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Run Instructions</h2>
+
+            <p class="mb-4 text-lg text-slate-300">
+                The system operates in two separate processes using an API.
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-3 text-white">Step 1: Install Packages</h3>
+            <div class="code-box mb-6">pip install Flask requests</div>
+
+            <h3 class="text-2xl font-semibold mb-3 text-white">Step 2: Run Backend</h3>
+            <div class="code-box mb-6">python backend.py</div>
+
+            <h3 class="text-2xl font-semibold mb-3 text-white">Step 3: Run Frontend</h3>
+            <div class="code-box">python frontend.py</div>
+
+            <p class="font-medium text-red-400 mt-6">
+                ⚠ Ensure backend is running before starting the frontend GUI.
+            </p>
+        </section>
+
+        <!-- DOWNLOAD SECTION -->
+        <section class="mb-16 p-6 bg-card rounded-xl shadow-lg fade-slide hover-glow text-center">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Download Project</h2>
+            <a href="Legendaryoneapex_bookstore.zip" download class="inline-block bg-yellow-500 text-midnight font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition">
+                Download ZIP
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-slate-500 py-6 mt-12 fade-slide">
+        <div class="max-w-4xl mx-auto text-center">
+            <p>© 2025 MyLibrary Project.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
