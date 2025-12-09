@@ -14,12 +14,11 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #020617, #020617, #000);
+      background: linear-gradient(135deg, #020617, #020617, #020617);
       color: #cbd5f5;
       scroll-behavior: smooth;
     }
 
-    /* Fade + slide */
     .fade-slide {
       animation: fadeSlide 0.9s ease forwards;
     }
@@ -35,17 +34,15 @@
       }
     }
 
-    /* Glow hover */
     .hover-zoom {
-      transition: all .35s ease;
+      transition: all .3s ease;
     }
 
     .hover-zoom:hover {
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 0 25px rgba(228,141,41,0.45), 0 14px 40px rgba(0,0,0,.5);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(0,0,0,.4);
     }
 
-    /* Nav underline glow */
     .nav-link {
       position: relative;
       color: #cbd5f5;
@@ -58,27 +55,25 @@
       bottom: -6px;
       width: 0%;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #e48d29, transparent);
-      box-shadow: 0 0 10px rgba(228,141,41,.6);
-      transition: width .35s ease;
+      background: #e48d29;
+      transition: width .3s ease;
     }
 
     .nav-link:hover::after {
       width: 100%;
     }
-
-    /* Image glow */
+    
     .game-image {
       transition: transform .5s ease, box-shadow .5s ease;
       cursor: pointer;
     }
 
     .game-image:hover {
-      transform: scale(1.06);
-      box-shadow: 0 0 35px rgba(228,141,41,0.45), 0 20px 50px rgba(0,0,0,.6);
-    }
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,.5);
 
-    /* Light divider */
+    }
+        /* Light divider */
     .light-bar {
       height: 3px;
       background: linear-gradient(90deg, transparent, #e48d29, transparent);
@@ -90,6 +85,9 @@
       0%, 100% { opacity: .4; }
       50% { opacity: 1; }
     }
+  </style>
+</head>
+
   </style>
 </head>
 
@@ -112,24 +110,26 @@
 <!-- ========== MAIN CONTENT ========== -->
 <main class="max-w-4xl mx-auto px-6 py-12 bg-white/95 rounded-xl shadow-xl fade-slide">
 
-  <h1 class="text-4xl font-extrabold mb-3 text-[#e48d29] text-center">
+  <h1 class="text-4xl font-extrabold mb-4 text-[#e48d29]">
     🎮 Superman vs Batman – 2D Multiplayer Game
   </h1>
 
-  <div class="light-bar"></div>
-
-  <p class="text-lg text-gray-700 mb-10 leading-relaxed text-center">
+  <p class="text-lg text-gray-700 mb-10 leading-relaxed">
     Superman vs Batman is a fast-paced 2D multiplayer game where two players use
     unique characters and weapons in real-time combat.
   </p>
 
-  <!-- IMAGE SECTION -->
+  <!-- IMAGE SECTION - CLICKABLE -->
   <div class="mb-12">
-    <h2 class="text-2xl font-bold text-[#130f40] mb-4 text-center">📸 Game Preview</h2>
+    <h2 class="text-2xl font-bold text-[#130f40] mb-4">📸 Game Preview</h2>
 
     <div class="rounded-xl overflow-hidden shadow-lg hover-zoom">
       <a href="game-details.html">
-        <img src="GamePreview.png" alt="Game Preview" class="w-full h-[280px] object-cover game-image" > </a> </div> </div>
+        <img 
+          src="GamePreview.png"
+          alt="Game Preview"
+          class="w-full h-[280px] object-cover game-image"
+        >
       </a>
     </div>
   </div>
@@ -153,8 +153,8 @@
 
   <!-- FEATURES -->
   <div class="mb-10">
-    <h2 class="text-2xl font-bold mb-4 text-[#130f40] text-center">✨ Game Features</h2>
-    <ul class="list-disc list-inside text-gray-700 space-y-2 text-center">
+    <h2 class="text-2xl font-bold mb-4 text-[#130f40]">✨ Game Features</h2>
+    <ul class="list-disc list-inside text-gray-700 space-y-2">
       <li>Real-time local multiplayer</li>
       <li>Smooth 2D animations</li>
       <li>Unique characters & abilities</li>
@@ -181,4 +181,4 @@
 </footer>
 
 </body>
-</html>
+</html> similar effects to this code has well
