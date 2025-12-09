@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Search - Feature Details</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #020617, #020617);
+      color: #cbd5f5;
+      scroll-behavior: smooth;
+    }
+
+    .fade-slide {
+      animation: fadeSlide 0.9s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hover-zoom {
+      transition: all .3s ease;
+    }
+
+    .hover-zoom:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 0 20px rgba(245,158,11,0.35);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 2px;
+      background: #e48d29;
+      transition: width .3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .glass-box {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-[#130f40] text-white py-4 shadow-md fixed top-0 w-full z-50">
+  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-[#e48d29]">LegendaryOneApex</h1>
+    <ul class="flex space-x-8 text-lg font-semibold">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home.html" class="nav-link">About</a></li>
+      <li><a href="My Portfolio.html" class="nav-link">My Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="h-24"></div>
+
+<!-- MAIN -->
+<main class="max-w-4xl mx-auto px-6 py-12 fade-slide">
+
+  <div class="glass-box rounded-2xl p-10 shadow-xl hover-zoom">
+
+    <h1 class="text-4xl font-extrabold text-[#e48d29] mb-4">
+      🔍 Smart Search System
+    </h1>
+
+    <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+      Smart Search allows users to quickly find books using keywords, categories, 
+      and partial matches without scrolling through large lists.
+    </p>
+
+    <!-- IMAGE -->
+    <div class="mb-10 rounded-xl overflow-hidden shadow-lg hover-zoom">
+      <img src="Smart search.png" class="w-full h-[250px] object-cover">
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-white">⚙ How It Works</h2>
+      <ul class="list-disc list-inside text-slate-400 space-y-2">
+        <li>Searches by book name</li>
+        <li>Filters by author or genre</li>
+        <li>Instant real-time results</li>
+        <li>No page reload required</li>
+      </ul>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-white">💻 Technologies Used</h2>
+      <div class="bg-[#020617] p-5 rounded-xl text-slate-300 leading-relaxed">
+        <p>✔ Python (Tkinter)</p>
+        <p>✔ Flask API</p>
+        <p>✔ JSON file-based storage</p>
+      </div>
+    </div>
+
+    <!-- BACK BUTTON -->
+    <div class="text-center mt-10">
+      <a href="My Portfolio.html"
+         class="bg-[#e48d29] text-[#130f40] px-10 py-4 rounded-xl font-bold shadow-lg hover:bg-yellow-400 transition duration-300">
+        ← Back to Portfolio
+      </a>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center text-gray-500 py-10 mt-20">
+  © 2025 LegendaryOneApex
+</footer>
+
+</body>
+</html>
