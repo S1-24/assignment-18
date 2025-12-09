@@ -52,6 +52,11 @@ class PageTurnApp(tk.Tk):
         )
         style.map("Gold.TButton", background=[("active", ACCENT_HOVER)])
 
+        # New hover style with brighter glow
+        style.configure("GoldHover.TButton",
+            background=ACCENT_HOVER, foreground="#000000", font=("Inter", 10, "bold"), borderwidth=0
+        )
+
         style.configure("Gray.TButton",
             background="#1e293b", foreground=TEXT_PRIMARY, borderwidth=0
         )
@@ -77,7 +82,6 @@ class PageTurnApp(tk.Tk):
 
         self.create_layout()
         self.load_data()
-
 
     def create_layout(self):
         # ===== SIDEBAR =====
@@ -107,9 +111,13 @@ class PageTurnApp(tk.Tk):
         self.create_input(sidebar, "Year")
         self.entry_year = self.modern_entry(sidebar)
 
-        ttk.Button(sidebar, text="ADD TO LIBRARY", style="Gold.TButton",
-                   command=self.add_item).pack(fill="x", padx=25, ipady=12)
+        # ADD TO LIBRARY button with glow hover effect
+        self.btn_add = ttk.Button(sidebar, text="ADD TO LIBRARY", style="Gold.TButton",
+                   command=self.add_item)
+        self.btn_add.pack(fill="x", padx=25, ipady=12)
 
+        self.btn_add.bind("<Enter>", lambda e: self.btn_add.configure(style="GoldHover.TButton"))
+        self.btn_add.bind("<Leave>", lambda e: self.btn_add.configure(style="Gold.TButton"))
 
         # ===== MAIN AREA =====
         main = ttk.Frame(self, style="Main.TFrame")
@@ -130,12 +138,26 @@ class PageTurnApp(tk.Tk):
         self.entry_search.pack(side="left", fill="x", expand=True, ipady=8, padx=(0, 10))
         self.entry_search.insert(0, "Search title...")
 
-        ttk.Button(top, text="SEARCH", style="Gray.TButton",
-                   command=self.search).pack(side="left", padx=(0, 6))
-        ttk.Button(top, text="REFRESH", style="Gray.TButton",
-                   command=self.load_data).pack(side="left")
-        ttk.Button(top, text="DELETE", style="Danger.TButton",
-                   command=self.delete_item).pack(side="right")
+        self.btn_search = ttk.Button(top, text="SEARCH", style="Gray.TButton",
+                   command=self.search)
+        self.btn_search.pack(side="left", padx=(0, 6))
+
+        self.btn_refresh = ttk.Button(top, text="REFRESH", style="Gray.TButton",
+                   command=self.load_data)
+        self.btn_refresh.pack(side="left")
+
+        self.btn_delete = ttk.Button(top, text="DELETE", style="Danger.TButton",
+                   command=self.delete_item)
+        self.btn_delete.pack(side="right")
+
+        # Hover effect on SEARCH, REFRESH buttons (Gray -> GoldGlow)
+        for btn in [self.btn_search, self.btn_refresh]:
+            btn.bind("<Enter>", lambda e, b=btn: b.configure(style="GoldHover.TButton"))
+            btn.bind("<Leave>", lambda e, b=btn: b.configure(style="Gray.TButton"))
+
+        # Hover effect on DELETE button (Danger -> GoldGlow)
+        self.btn_delete.bind("<Enter>", lambda e: self.btn_delete.configure(style="GoldHover.TButton"))
+        self.btn_delete.bind("<Leave>", lambda e: self.btn_delete.configure(style="Danger.TButton"))
 
         # TABLE
         table_frame = ttk.Frame(card, style="Card.TFrame")
