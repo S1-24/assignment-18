@@ -65,6 +65,7 @@
 
     .game-image {
       transition: transform .5s ease, box-shadow .5s ease;
+      cursor: pointer;
     }
 
     .game-image:hover {
@@ -102,20 +103,19 @@
     unique characters and weapons in real-time combat.
   </p>
 
-  <!-- IMAGE SECTION -->
+  <!-- IMAGE SECTION - CLICKABLE -->
   <div class="mb-12">
     <h2 class="text-2xl font-bold text-[#130f40] mb-4">📸 Game Preview</h2>
 
     <div class="rounded-xl overflow-hidden shadow-lg hover-zoom">
-      <img 
-        src="GamePreview.png"
-        alt="Game Preview"
-        class="w-full h-[280px] object-cover game-image"
-      >
+      <a href="game-details.html">
+        <img 
+          src="GamePreview.png"
+          alt="Game Preview"
+          class="w-full h-[280px] object-cover game-image"
+        >
+      </a>
     </div>
-
-    
-    </p>
   </div>
 
   <!-- CARDS -->
