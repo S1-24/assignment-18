@@ -113,12 +113,44 @@
         .text-midnight {
             color: var(--midnight);
         }
+        
+        /* New styles for the screenshot display */
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .screenshot-item {
+            background-color: #020617;
+            border-radius: 0.6rem;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            background-color: #020617;
+            padding: 0.5rem;
+        }
+
+        .screenshot-item p {
+            padding: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+            color: var(--gold);
+            border-top: 1px solid #1e293b;
+            background-color: #1e293b;
+        }
     </style>
 </head>
 
 <body class="antialiased">
 
-    <!-- NAVBAR -->
     <nav class="bg-[#130f40] text-white py-4 shadow-md fixed top-0 w-full z-50">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-[#e48d29]">LegendaryOneApex</h1>
@@ -133,7 +165,6 @@
 
     <div class="h-20"></div>
 
-    <!-- HEADER -->
     <header class="bg-primary text-white py-14 mb-12 shadow-2xl fade-slide">
         <div class="max-w-4xl mx-auto px-4">
             <h1 class="text-5xl font-extrabold mb-2 tracking-tight">
@@ -145,11 +176,17 @@
 
     <main class="max-w-4xl mx-auto px-4">
 
-        <!-- PROJECT OVERVIEW -->
-        <section class="mb-16 p-6 bg-card rounded-xl shadow-lg border-t-4 border-yellow-500 fade-slide hover-glow">
-            <h2 class="text-3xl font-bold mb-4 text-white">Project Overview</h2>
+        <section id="project-overview" onclick="toggleScreenshots()" 
+                 class="mb-6 p-6 bg-card rounded-xl shadow-lg border-t-4 border-yellow-500 fade-slide hover-glow cursor-pointer">
+            <h2 class="text-3xl font-bold mb-4 text-white flex justify-between items-center">
+                Project Overview
+                <svg id="arrow-icon" class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </h2>
             <p class="text-lg text-slate-300 mb-6">
-                My Library is a desktop application designed to manage a personal collection of media.
+                My Library is a desktop application designed to manage a personal collection of media. 
+                <span class="font-bold text-accent">Click here to see the architecture!</span>
             </p>
 
             <div class="p-4 rounded-md bg-slate-950 border border-slate-800">
@@ -161,14 +198,28 @@
                 </ul>
             </div>
         </section>
+        
+        <section id="screenshot-container" class="mb-16 fade-slide" style="display: none;">
+            <h2 class="text-2xl font-bold mb-4 text-white">Application Architecture</h2>
+            <div class="screenshot-grid">
+                
+                <div class="screenshot-item">
+                    <img src="frontend.png" alt="Frontend GUI Screenshot" />
+                    <p>Frontend GUI (Python Tkinter)</p>
+                </div>
+                
+                <div class="screenshot-item">
+                    <img src="backend.png" alt="Backend Code Screenshot" />
+                    <p>Backend API Code (Python Flask)</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- FEATURES -->
         <section class="mb-16 fade-slide">
             <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Key Features</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                <!-- Inventory -->
                 <a href="inventory-details.html" class="block">
                     <div class="bg-card p-5 rounded-xl shadow-lg hover-glow">
                         <div class="feature-img-container">
@@ -179,7 +230,6 @@
                     </div>
                 </a>
 
-                <!-- Smart Search (UPDATED, CLICKABLE) -->
                 <a href="smart-search-details.html" class="block">
                     <div class="bg-card p-5 rounded-xl shadow-lg hover-glow">
                         <div class="feature-img-container">
@@ -192,7 +242,6 @@
             </div>
         </section>
 
-        <!-- RUN INSTRUCTIONS -->
         <section class="mb-16 p-6 bg-card rounded-xl shadow-lg fade-slide hover-glow">
             <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Run Instructions</h2>
 
@@ -214,7 +263,6 @@
             </p>
         </section>
 
-        <!-- DOWNLOAD SECTION -->
         <section class="mb-16 p-6 bg-card rounded-xl shadow-lg fade-slide hover-glow text-center">
             <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-slate-700 text-white">Download Project</h2>
             <a href="App.zip" download class="inline-block bg-yellow-500 text-midnight font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition">
@@ -224,12 +272,26 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-primary text-slate-500 py-6 mt-12 fade-slide">
         <div class="max-w-4xl mx-auto text-center">
             <p>© 2025 MyLibrary Project.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleScreenshots() {
+            const container = document.getElementById('screenshot-container');
+            const arrow = document.getElementById('arrow-icon');
+            
+            if (container.style.display === 'none') {
+                container.style.display = 'block';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                container.style.display = 'none';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
 
 </body>
 </html>
