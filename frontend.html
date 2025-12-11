@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontend Details - MyLibrary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --midnight: #0f172a;
+            --gold: #f59e0b;
+            --dark-text: #cbd5f5;
+            --card-bg: #0b1220;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #020617, #020617, #020617);
+            color: var(--dark-text);
+            scroll-behavior: smooth;
+        }
+
+        .text-accent {
+            color: var(--gold);
+        }
+        .bg-primary {
+            background-color: var(--midnight);
+        }
+        .bg-card {
+            background-color: var(--card-bg);
+        }
+        .code-box {
+            background-color: #020617;
+            padding: 1rem;
+            border-radius: 0.6rem;
+            color: #e2e8f0;
+            font-family: monospace;
+            overflow-x: auto;
+            border-left: 4px solid var(--gold);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-item {
+            background-color: #020617;
+            border-radius: 0.6rem;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            padding: 1rem;
+        }
+
+        .gallery-item p {
+            padding: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+            color: var(--dark-text);
+            background-color: #1e293b;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <nav class="bg-[#130f40] text-white py-4 shadow-md fixed top-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#e48d29]">LegendaryOneApex</h1>
+            <ul class="flex space-x-8 text-lg font-semibold">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="home.html" class="nav-link">About</a></li>
+                <li><a href="My Portfolio.html" class="nav-link">My Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="h-20"></div>
+
+    <header class="bg-primary text-white py-14 mb-12 shadow-2xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-4xl font-extrabold mb-2 tracking-tight">
+                Frontend UI Details <span class="text-accent">(Python Tkinter)</span>
+            </h1>
+            <p class="text-xl text-slate-400">Deep dive into the graphical user interface.</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        
+        <section class="mb-16 p-6 bg-card rounded-xl shadow-lg border-t-4 border-yellow-500">
+            <h2 class="text-3xl font-bold mb-4 text-white">Frontend Screenshots</h2>
+            <p class="text-lg text-slate-300 mb-6">Explore the dark theme, data table, and input fields.</p>
+
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="frontend_gui_screenshot.png" alt="Main Library View" />
+                    <p>1. Main Library View & Search</p>
+                </div>
+                
+                <div class="gallery-item">
+                    
+                    <img src="frontend_add_item.png" alt="Add Item Sidebar" />
+                    <p>2. Add Item Sidebar</p>
+                </div>
+                
+                <div class="gallery-item">
+                    
+                    <img src="frontend_table_view.png" alt="Table View" />
+                    <p>3. Detailed Table View</p>
+                </div>
+
+                <div class="gallery-item">
+                    
+                    <img src="frontend_detail_pane.png" alt="Detail View" />
+                    <p>4. Item Detail Pane</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-16 p-6 bg-card rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-4 text-white">Frontend Code Snippet (Styling)</h2>
+            <p class="text-lg text-slate-300 mb-6">The code defining the consistent dark style.</p>
+            <div class="code-box">
+<pre>
+# Relevant Tkinter/Python Snippet for Styling
+style = ttk.Style()
+style.theme_use("clam")
+
+style.configure("Sidebar.TFrame", background=BG_SIDEBAR)
+style.configure("Title.TLabel",
+    background=BG_SIDEBAR, foreground=ACCENT, font=("Inter", 24, "bold")
+)
+
+# ... (and other style configurations)
+
+self.entry_search = tk.Entry(
+    # Custom dark theme attributes
+    bg=ENTRY_BG, fg=TEXT_PRIMARY, insertbackground=TEXT_PRIMARY,
+    relief="flat", font=("Inter", 11), highlightthickness=1,
+    highlightbackground=ENTRY_BORDER
+)
+</pre>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary text-slate-500 py-6 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p><a href="index.html" class="text-accent hover:underline">← Back to Project Home</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

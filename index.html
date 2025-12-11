@@ -15,6 +15,8 @@
             --dark-text: #cbd5f5;
             --card-bg: #0b1220;
             --accent-blue: #38bdf8;
+            /* Define a consistent glow shadow for repeated use */
+            --subtle-glow: 0 0 10px rgba(245, 158, 11, 0.4); 
         }
 
         body {
@@ -109,6 +111,16 @@
             transform: translateY(-4px);
             transition: 0.3s ease;
         }
+        
+        /* New style for light effect on screenshots */
+        .screenshot-light-effect {
+            box-shadow: var(--subtle-glow);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .screenshot-light-effect:hover {
+            box-shadow: 0 0 5px rgba(245, 158, 11, 0.6), 0 0 15px rgba(245, 158, 11, 0.4);
+        }
 
         .text-midnight {
             color: var(--midnight);
@@ -127,6 +139,15 @@
             border-radius: 0.6rem;
             overflow: hidden;
             border: 1px solid #1e293b;
+            /* Apply the initial light effect here */
+            box-shadow: var(--subtle-glow);
+            transition: box-shadow 0.3s ease, transform 0.3s ease; /* Ensure transform transition is kept */
+        }
+        
+        .screenshot-item:hover {
+            /* Apply a more intense light effect on hover */
+            box-shadow: 0 0 5px rgba(245, 158, 11, 0.6), 0 0 15px rgba(245, 158, 11, 0.4);
+            transform: translateY(-4px); /* Inherit the hover-glow transform effect */
         }
         
         .screenshot-item img {
@@ -200,18 +221,20 @@
         </section>
         
         <section id="screenshot-container" class="mb-16 fade-slide" style="display: none;">
-            <h2 class="text-2xl font-bold mb-4 text-white">Application Architecture</h2>
+            <h2 class="text-2xl font-bold mb-4 text-white">Application Architecture (Click to see more)</h2>
             <div class="screenshot-grid">
                 
-                <div class="screenshot-item">
-                    <img src="frontend 01.png" alt="Frontend GUI Screenshot" />
-                    <p>Frontend GUI (Python Tkinter)</p>
-                </div>
+                <a href="frontend-details.html" class="screenshot-item block">
+                    
+                    <img src="frontend_gui_screenshot.png" alt="Frontend GUI Screenshot" />
+                    <p>Frontend GUI (More Screenshots & Details)</p>
+                </a>
                 
-                <div class="screenshot-item">
-                    <img src="backend01.png" alt="Backend Code Screenshot" />
-                    <p>Backend API Code (Python Flask)</p>
-                </div>
+                <a href="backend-details.html" class="screenshot-item block">
+                    
+                    <img src="backend_code_screenshot.png" alt="Backend Code Screenshot" />
+                    <p>Backend API Code (More Screenshots & Details)</p>
+                </a>
             </div>
         </section>
 
