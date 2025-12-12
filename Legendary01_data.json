@@ -250,5 +250,12 @@
         "creator": "Shawn Lvy",
         "category": "Film",
         "year": "2024"
+    },
+    {
+        "id": 37,
+        "title": "Stranger thing",
+        "creator": "Duffer Brothers",
+        "category": "Film",
+        "year": "2012"
     }
 ]

@@ -45,7 +45,7 @@ def add_item(title, creator, category, year, image_filename):
         "creator": creator,
         "category": category,
         "year": year,
-         # <-- NEW FIELD to store the image reference
+        
     }
     
     items.append(new_item)
